@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "SecurePass",
+  "description": "Password checker",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "action":{
+    "default_icon": "public/icon-32.png"
+  },
+  "content_scripts":[
+    {
+      "matches": ["https://*/*"],
+      "js": ["src/lib/js-sha1.min.js"],
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+  {
+    "resources": [
+      "src/ui/popup.html",
+      "src/ui/popup.css",
+      "src/ui/popup.js"
+    ],
+    "matches": ["https://*/*"]
+  }
+]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script src="../lib/js-sha1.min.js"></script>
+
+</head>
+<body class="flex justify column frame-border">
+    <header class="flex justify row center-align gap full-width text-color">
+        <p class="fontsize-12px">SecurePass</p>
+        <button id="close-button" class="no-bg text-color" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+       xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+        </button>
+
+    </header>
+    <main>
+        <div id="instructions-container" class="flex column full-width fontsize-14px error">
+        </div>
+        <div id="error-container" class="invisible flex justify row full-width text-color gap error">
+            <p class="fontsize-12px">ERROR:</p>
+            <p id="error-message" class="fontsize-12px">Password field required.</p>
+        </div>
+        <div id="results-container-good" class="hidden flex justify text-color padding-inline-s padding-block-xs gap column inline-gap gap">
+            <div class="flex row gap-xs">
+                <p id="result-heading" class="fontsize-14px">Good News:</p>
+                <p class="fontsize-14px">password not compromised!</p>
+            </div>
+            <p id="result-message" class="fontsize-12px full-width">This is not an indicator of password strength, merely that it is not indexed on ‘Have I Been Pwned’ password dataset.</p>
+        </div>
+        <div id="results-container-bad" class="hidden flex justify text-color padding-inline-s padding-block-xs gap column inline-gap gap">
+            <div class="flex row gap-xs">
+                <p id="result-heading" class="fontsize-14px">Oh No:</p>
+                <p id="result-count" class="fontsize-14px">0</p>
+            </div>
+            <p id="result-message" class="fontsize-12px full-width">This password has previously appeared in a data breach and should never be used. If you’ve ever used it anywhere before, change it immediately!</p>
+        </div>
+        
+        <button id="check-password-button" class="fontsize-14px text-color" type="button">Check my password</button>
+    </main>
+    <script src="popup.js"></script>
+</body>
+</html>

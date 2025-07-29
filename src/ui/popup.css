@@ -1,0 +1,174 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #434343;
+  --text-color-accent: #000;
+  --error-color: ##7a7a7a;
+  --error-bg-color: #ffddd7;
+  --error-text-color: #a10000;
+  --success-bg-color: #dcd6ff;
+  --success-text-color: #423a72;
+  --button-bg-color: #f1f1f1;
+  --border-color: #e5e5e5;
+  --gap: 1rem;
+}
+
+/* Dark Mode (when .dark is present) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --text-color: #ffffffa4;
+    --text-color-accent: #ffffff;
+    --error-color: #999999;
+    --error-bg-color: #430900;
+    --error-text-color: #ff7272;
+    --success-bg-color: #221a52;
+    --success-text-color: #b1a4ff;
+    --button-bg-color: #414141;
+    --border-color: #616161;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: none;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* width: fit-content; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  padding: 0.75rem;
+  height: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  opacity: 90%;
+}
+
+button:hover {
+  opacity: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center-align {
+  align-items: center;
+}
+
+.gap {
+  margin-block-end: var(--gap);
+}
+
+.gap-xs {
+  gap: 0.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.fontsize-14px {
+  font-size: 14px;
+  line-height: 135%;
+}
+
+.fontsize-12px {
+  font-size: 12.8px;
+  line-height: 135%;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.padding-block-xs {
+  padding-block: 0.75rem;
+}
+
+.padding-inline-s {
+  padding-inline: 1rem;
+}
+
+.inline-gap {
+  gap: 1rem;
+}
+
+.no-bg {
+  background: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.frame-border {
+  border: 1px solid var(--border-color);
+}
+
+#results-container-bad {
+  background-color: var(--error-bg-color);
+  color: var(--error-text-color);
+}
+
+#results-container-good {
+  background-color: var(--success-bg-color);
+  color: var(--success-text-color);
+}
+
+#check-password-button {
+  background-color: var(--button-bg-color);
+  color: var(--text-color-accent);
+  width: 100%;
+  height: 41px;
+  border-radius: 4px;
+  border: 0px solid var(--border-color);
+}
+
+#check-password-button:hover {
+  border: 1px solid var(--border-color);
+  transition: all;
+  transition-duration: 0.4s;
+}
+
+#close-button:hover {
+  opacity: 100%;
+}
