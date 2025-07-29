@@ -6,5 +6,6 @@ Clone git repo. Open Google Chrome extension settings and click load unpack.
 
 Select extension folder.
 
-https://github.com/user-attachments/assets/98dd3edd-89e4-4372-ab89-bb3606351c2b
-
+### It looks like this
+(There is light and dark mode as well)
+https://github.com/user-attachments/assets/89f2aef0-cd6f-4633-a0b7-7591a97f64aa
